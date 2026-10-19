@@ -29,7 +29,15 @@ def myImageResize(in_pixels, out_rows, out_cols, method):
                 #round to closest input pixel and clamp to image 
                 xn = min(max(int(round(x)), 0),in_rows -1)
                 yn = min(max(int(round(y)), 0), in_cols -1)
-                out_pixels[r,c]
+                out_pixels[r,c] = in_pixels[xn, yn]
+            elif method == 'bilinear':
+                x1 = min(max(int(np.floor(x)), 0 ), in_rows -1)
+                x2 = min( x1+ 1, in_rows -1)
+                y1 = min(max(int (np.floor(y)),0), in_cols -1)
+                y2 = min(y1+1, in_cols-1)
+                
+
+
 
 
 
