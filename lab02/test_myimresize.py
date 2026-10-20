@@ -1,4 +1,4 @@
-# Import pillow
+#Import pillow
 from PIL import Image, ImageOps
 
 # Import numpy

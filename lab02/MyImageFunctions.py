@@ -1,6 +1,7 @@
 
 import numpy as np 
 
+
 def mybilinear(x1, x2, y1, y2, v11, v12, v21, v22, x, y):
 
 
@@ -20,11 +21,17 @@ def mybilinear(x1, x2, y1, y2, v11, v12, v21, v22, x, y):
     return value
 
 def myRMSE(i1,i2):
+    # this functions computes the difference betwween two matricies representing grascale images 
+    diff = i1- i2
+    squared = diff **2 
+    mean_squared = np. mean(squared)
+    rmse  = np. sqrt(mean_squared) #square root of the mean gives the rmse
+    return rmse
 
     
 
 
-def myimResize(in_pixels, out_rows, out_cols, method):
+def myImageResize(in_pixels, out_rows, out_cols, method):
 
     """ functions should resize a grayscale imaes using nearest neighbor or bilinear interpolation"""
 
